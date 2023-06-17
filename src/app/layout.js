@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter, Roboto, Poppins } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
+import { Providers } from './GlobalRedux/provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,9 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className='containers'>
-          <Navbar/>
-            {children}
-          <Footer/>
+          <Providers>
+            <Navbar/>
+              {children}
+            <Footer/>
+          </Providers>
         </div>
       </body>
     </html>

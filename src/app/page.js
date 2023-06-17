@@ -1,10 +1,10 @@
-
+'use client'
+import Sidebar from './components/sidebar/sidebar'
 
 export default function Home() {
   return (
     <div className='h-[1000px]'>
-      Brown
-      lkjhkgkgjgjmgvjyhkhb,kjgjm nfcnhngbk,nk,ytsfsfgc
+      <Sidebar />
     </div>
   )
 }
